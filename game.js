@@ -23,22 +23,30 @@ const nextSequence = () => {
   playSound(randomChosenColour)
 }
 
-const handleClick = (buttonId) => {
-  userPattern.push(buttonId)
-  animatePress(buttonId)
+const checkAnswer = (buttonColor) => {
   const lastClickIndex = userPattern.length - 1
   if (gamePattern[lastClickIndex] === userPattern[lastClickIndex]) {
-    playSound(buttonId)
+    playSound(buttonColor)
     if (gamePattern.length == userPattern.length) {
       score += 1
-      $("h1").text("Level " + score)
+      setTimeout(() => $("h1").text("Level " + score), 500)
       setTimeout(nextSequence, 1000)
     }
   } else {
     playSound("wrong")
     gameOn = false
     $("h1").text("Game Over.")
+    $("body").addClass("game-over")
+    setTimeout(() => $("body").removeClass("game-over"), 200)
     setTimeout(() => $("h1").text("Press A Key to Start"), 3000)
+  }
+}
+
+const handleClick = (buttonId) => {
+  if (gameOn) {
+    userPattern.push(buttonId)
+    animatePress(buttonId)
+    checkAnswer(buttonId)
   }
 }
 

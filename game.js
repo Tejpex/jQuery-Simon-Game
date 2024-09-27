@@ -60,8 +60,12 @@ const startGame = () => {
   }
 }
 
-$(".btn").click((e) => handleClick(e.target.id))
+const toggleRules = () => {
+  $(".rules-text").fadeToggle()
+}
 
+$(".rules-btn").click(toggleRules)
+$(".btn").click((e) => handleClick(e.target.id))
 $(document).keypress(startGame)
 
-
+toggleRules()

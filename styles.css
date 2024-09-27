@@ -10,6 +10,30 @@ body {
   color: #FEF2BF;
 }
 
+.rules-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rules-btn {
+  background: none;
+  color: #FEF2BF;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  width: 95px;
+}
+
+.rules-text {
+  color: #FEF2BF;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
 .container {
   display: block;
   width: 50%;
@@ -51,3 +75,26 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+
+/*@media (min-width: 1105px) {
+  .rules-div {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .rules-text {
+    text-align: left;
+    padding: 0 20px;
+    line-height: 1.5;
+  }
+
+  .rules-btn {
+    position: relative;
+    top: 15px;
+  }
+
+  #level-title {
+    margin: 5% 5% 2%;
+  }
+}*/

@@ -36,19 +36,16 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 
 .btn {
-  margin: 25px;
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 400px;
   border: 10px solid black;
   border-radius: 20%;
 }
@@ -60,21 +57,32 @@ body {
 
 .red {
   background-color: red;
+  justify-self: start;
 }
 
 .green {
   background-color: green;
+  justify-self: end;
 }
 
 .blue {
   background-color: blue;
+  justify-self: start;
 }
 
 .yellow {
   background-color: yellow;
+  justify-self: end;
 }
 
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+@media (min-width: 370px) {
+  .btn {
+    height: 300px;
+    width: 300px;
+  }
 }

@@ -44,8 +44,8 @@ body {
 }
 
 .btn {
-  height: 400px;
-  width: 400px;
+  height: 200px;
+  width: 200px;
   border: 10px solid black;
   border-radius: 20%;
 }
@@ -80,7 +80,14 @@ body {
   background-color: grey;
 }
 
-@media (min-width: 370px) {
+@media (max-width:370px) {
+  .btn {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media (min-width:371px) and (max-width:700px) {
   .btn {
     height: 300px;
     width: 300px;

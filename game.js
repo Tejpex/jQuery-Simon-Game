@@ -66,6 +66,7 @@ const toggleRules = () => {
 
 $(".rules-btn").click(toggleRules)
 $(".btn").click((e) => handleClick(e.target.id))
+$(".start-btn").click(startGame)
 $(document).keypress(startGame)
 
 toggleRules()
